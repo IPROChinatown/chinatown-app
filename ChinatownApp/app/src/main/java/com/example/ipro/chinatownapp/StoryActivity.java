@@ -17,6 +17,6 @@ public class StoryActivity extends AppCompatActivity {
 
         sp = getSharedPreferences("language", Context.MODE_PRIVATE);
         editor = sp.edit();
-        
+
     }
 }
