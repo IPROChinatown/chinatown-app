@@ -2,7 +2,6 @@ package com.example.ipro.chinatownapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -18,6 +17,7 @@ import com.google.zxing.integration.android.IntentResult;
 public class MainActivity extends AppCompatActivity {
 
     private android.widget.Button scan_btn;
+    private Button loc_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,29 +40,31 @@ public class MainActivity extends AppCompatActivity {
                 integrator.initiateScan();
             }
         });
+
+        loc_btn = (Button) findViewById(R.id.locations);
+        scan_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LocationDisplayActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode,data);
-        if(result != null){
-            if(result.getContents()==null){
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            if (result.getContents() == null) {
                 Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
-
-            }
-            else{
+            } else {
                 Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
             }
-        }
-        else{
+        } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
-
-
-
         super.onActivityResult(requestCode, resultCode, data);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

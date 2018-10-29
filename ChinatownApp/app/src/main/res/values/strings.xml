@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ChinatownApp</string>
-    <string name="action_settings">Settings</string>
+    <string name="location_1">Edit Description here</string>
+    <string name="location_2">Edit Description here</string>
+    <string name="location_3">Edit Description here</string>
+    <string name="location_4">Edit Description here</string>
 </resources>
