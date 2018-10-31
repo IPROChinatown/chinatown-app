@@ -16,15 +16,24 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
-    private android.widget.Button scan_btn;
-    private Button loc_btn;
+    android.widget.Button scan_btn;
+    Button loc_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        /* Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar); */
+
+        loc_btn = findViewById(R.id.locations);
+        loc_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LocationDisplayActivity.class);
+                startActivity(intent);
+            }
+        });
 
         scan_btn = (android.widget.Button) findViewById(R.id.scan_btn);
         final android.app.Activity activity = this;
@@ -38,15 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 integrator.setBeepEnabled(false);
                 integrator.setBarcodeImageEnabled(false);
                 integrator.initiateScan();
-            }
-        });
-
-        loc_btn = (Button) findViewById(R.id.locations);
-        scan_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LocationDisplayActivity.class);
-                startActivity(intent);
             }
         });
     }
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.

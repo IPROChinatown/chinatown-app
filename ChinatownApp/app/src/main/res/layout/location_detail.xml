@@ -12,7 +12,7 @@
             android:layout_marginLeft="5dip"
             android:src="@drawable/location_1" />
         <TextView
-            android:id="@+id/locations"
+            android:id="@+id/location"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/image"

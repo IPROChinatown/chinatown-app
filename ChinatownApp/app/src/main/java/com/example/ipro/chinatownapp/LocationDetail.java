@@ -11,7 +11,7 @@ import com.example.ipro.chinatownapp.classes.LocationActivity;
 public class LocationDetail extends AppCompatActivity{
 
     private ImageView mImageView;
-    private TextView mQuote;
+    private TextView mLocation;
     private int mPosition;
     private LocationActivity mDataSource;
 
@@ -25,12 +25,12 @@ public class LocationDetail extends AppCompatActivity{
 
         mDataSource = new LocationActivity();
         mImageView = (ImageView) findViewById(R.id.image);
-        mQuote = (TextView) findViewById(R.id.locations);
+        mLocation = (TextView) findViewById(R.id.location);
 
-        mImageView.setImageResource(mDataSource.getmPhotoHdPool().
+        mImageView.setImageResource(mDataSource.getPhotoHdPool().
                 get(mPosition));
 
-        mQuote.setText(getResources().getString(mDataSource.getmLocation()
+        mLocation.setText(getResources().getString(mDataSource.getLocation()
                 .get(mPosition)));
     }
 }

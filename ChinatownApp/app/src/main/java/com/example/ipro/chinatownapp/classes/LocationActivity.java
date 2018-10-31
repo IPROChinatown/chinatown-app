@@ -6,15 +6,15 @@ import java.util.ArrayList;
 
 public class LocationActivity {
 
-    private ArrayList<Integer> mPhotoPool;
+    private ArrayList<Integer> PhotoPool;
     private ArrayList<Integer> mLocation;
-    private ArrayList<Integer> mPhotoHdPool;
+    private ArrayList<Integer> PhotoHdPool;
 
     private void setupPhotoPool() {
-        mPhotoPool.add(R.drawable.location_1); //use the same picture for now, and will replace after we have the contents
-        mPhotoPool.add(R.drawable.location_1);
-        mPhotoPool.add(R.drawable.location_1);
-        mPhotoPool.add(R.drawable.location_1);
+        PhotoPool.add(R.drawable.location_1); //use the same picture for now, and will replace after we have the contents
+        PhotoPool.add(R.drawable.location_1);
+        PhotoPool.add(R.drawable.location_1);
+        PhotoPool.add(R.drawable.location_1);
     }
     private void setupLocation() {
         mLocation.add(R.string.location_1); //the location descriptions are in the strings.xml
@@ -24,31 +24,32 @@ public class LocationActivity {
     }
 
     private void setupPhotoHDPool() {
-        mPhotoHdPool.add(R.drawable.location_1);
-        mPhotoHdPool.add(R.drawable.location_1);
-        mPhotoHdPool.add(R.drawable.location_1);
+        PhotoHdPool.add(R.drawable.location_1);
+        PhotoHdPool.add(R.drawable.location_1);
+        PhotoHdPool.add(R.drawable.location_1);
+        PhotoHdPool.add(R.drawable.location_1);
     }
 
-    public ArrayList<Integer> getmPhotoHdPool() {
-        return mPhotoHdPool;
+    public ArrayList<Integer> getPhotoHdPool() {
+        return PhotoHdPool;
     }
 
-    public ArrayList<Integer> getmPhotoPool() {
-        return mPhotoPool;
+    public ArrayList<Integer> getPhotoPool() {
+        return PhotoPool;
     }
 
-    public ArrayList<Integer> getmLocation() {
+    public ArrayList<Integer> getLocation() {
         return mLocation;
     }
 
     public int getDataSourceLength() {
-        return mPhotoPool.size();
+        return PhotoPool.size();
     }
 
     public LocationActivity() {
-        mPhotoPool = new ArrayList();
+        PhotoPool = new ArrayList();
         mLocation = new ArrayList();
-        mPhotoHdPool = new ArrayList();
+        PhotoHdPool = new ArrayList();
         setupPhotoPool();
         setupLocation();
         setupPhotoHDPool();

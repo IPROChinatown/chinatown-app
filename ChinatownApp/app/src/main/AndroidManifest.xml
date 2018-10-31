@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".LocationDisplayActivity" >
         </activity>
+        <activity android:name=".LocationDetail" >
+        </activity>
     </application>
 
 </manifest>

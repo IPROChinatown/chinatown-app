@@ -50,7 +50,7 @@ public class LocationDisplayActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             ImageView thumbnail;
-            TextView quote;
+            TextView location;
 
             if (convertView == null) {
                 convertView = mInflator.inflate(R.layout.list_item_location, parent,
@@ -58,9 +58,9 @@ public class LocationDisplayActivity extends AppCompatActivity {
             }
 
             thumbnail = (ImageView) convertView.findViewById(R.id.thumb);
-            thumbnail.setImageResource(mDataSource.getmPhotoPool().get(position));
-            quote = (TextView) convertView.findViewById(R.id.text);
-            quote.setText(mDataSource.getmLocation().get(position));
+            thumbnail.setImageResource(mDataSource.getPhotoPool().get(position));
+            location = (TextView) convertView.findViewById(R.id.text);
+            location.setText(mDataSource.getLocation().get(position));
             return convertView;
         }
 
@@ -68,7 +68,7 @@ public class LocationDisplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.location_detail);
+        setContentView(R.layout.location_list);
 
         ListView mListView = (ListView) findViewById(R.id.location_list);
         mListView.setAdapter(new LocationAdapter(this));
