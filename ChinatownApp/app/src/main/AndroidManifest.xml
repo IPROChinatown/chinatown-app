@@ -16,9 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LocationDisplayActivity" >
+        <activity
+            android:name=".LocationDisplayActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".LocationDetail" >
+        <activity
+            android:name=".LocationDetail"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

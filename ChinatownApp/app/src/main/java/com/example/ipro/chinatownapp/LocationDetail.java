@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.ipro.chinatownapp.classes.LocationActivity;
-
 public class LocationDetail extends AppCompatActivity{
 
     private ImageView mImageView;
@@ -27,10 +25,10 @@ public class LocationDetail extends AppCompatActivity{
         mImageView = (ImageView) findViewById(R.id.image);
         mLocation = (TextView) findViewById(R.id.location);
 
-        mImageView.setImageResource(mDataSource.getPhotoHdPool().
+        mImageView.setImageResource(mDataSource.getmPhotoHdPool().
                 get(mPosition));
 
-        mLocation.setText(getResources().getString(mDataSource.getLocation()
+        mLocation.setText(getResources().getString(mDataSource.getmLocation()
                 .get(mPosition)));
     }
 }

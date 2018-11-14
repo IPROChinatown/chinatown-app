@@ -13,8 +13,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.ipro.chinatownapp.classes.LocationActivity;
-
 
 public class LocationDisplayActivity extends AppCompatActivity {
 
@@ -58,9 +56,9 @@ public class LocationDisplayActivity extends AppCompatActivity {
             }
 
             thumbnail = (ImageView) convertView.findViewById(R.id.thumb);
-            thumbnail.setImageResource(mDataSource.getPhotoPool().get(position));
+            thumbnail.setImageResource(mDataSource.getmPhotoPool().get(position));
             location = (TextView) convertView.findViewById(R.id.text);
-            location.setText(mDataSource.getLocation().get(position));
+            location.setText(mDataSource.getmLocation().get(position));
             return convertView;
         }
 
@@ -68,7 +66,7 @@ public class LocationDisplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.location_list);
+        setContentView(R.layout.activity_location_display);
 
         ListView mListView = (ListView) findViewById(R.id.location_list);
         mListView.setAdapter(new LocationAdapter(this));

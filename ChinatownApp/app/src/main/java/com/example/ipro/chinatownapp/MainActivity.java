@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,15 +27,6 @@ public class MainActivity extends AppCompatActivity {
         /* Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar); */
 
-        loc_btn = findViewById(R.id.locations);
-        loc_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LocationDisplayActivity.class);
-                startActivity(intent);
-            }
-        });
-
         scan_btn = (android.widget.Button) findViewById(R.id.scan_btn);
         final android.app.Activity activity = this;
         scan_btn.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 integrator.initiateScan();
             }
         });
+
+        loc_btn = (Button)findViewById(R.id.locations);
+        loc_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LocationDisplayActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -60,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
             }
-        } else {
+        } /*else {
             super.onActivityResult(requestCode, resultCode, data);
-        }
+        }*/
         super.onActivityResult(requestCode, resultCode, data);
     }
 
