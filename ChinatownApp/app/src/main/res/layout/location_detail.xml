@@ -10,7 +10,7 @@
             android:layout_width="fill_parent"
             android:layout_height="350dip"
             android:layout_marginLeft="5dip"
-            android:src="@drawable/location_1" />
+            android:src="@drawable/home_icon" />
         <TextView
             android:id="@+id/location"
             android:layout_width="fill_parent"

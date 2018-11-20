@@ -25,48 +25,52 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <Button
-        android:id="@+id/scan_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="148dp"
-        android:text="SCAN "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+    //Layout used for items on home screen
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="267dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="QR CODE SCANNER"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scan_btn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <Button
-        android:id="@+id/locations"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:text="locations"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
+        //Button for scanning a QR code
+
+        <Button
+            android:id="@+id/scan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:layout_toRightOf="@id/codeInput"
+            android:text="SCAN "
+            tools:ignore="MissingConstraints" />
+
+        //Button to navigate different locations in Chinatown
+
+        <Button
+            android:id="@+id/locations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:layout_toLeftOf="@id/codeInput"
+            android:text="Locations" />
+
+        //Button used to input code corresponding to location
+
+        <Button
+            android:id="@+id/codeInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="150dp"
+            android:onClick="Activity2"
+            android:text="Input Code" />
+
+    </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>
