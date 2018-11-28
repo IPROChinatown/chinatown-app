@@ -11,11 +11,11 @@ import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    //Code used to handle number pad input
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        // MainActivity ma1=new MainActivity();
 
         //Buttons used in number pad. Include digits 0-9, delete, and enter.
         final EditText eText=findViewById(R.id.eText);
@@ -136,12 +136,29 @@ public class MainActivity2 extends AppCompatActivity {
                     eText.setText("");
                     Toast.makeText(getApplicationContext(), "Please enter a valid code", Toast.LENGTH_SHORT).show();
                 }
-                //Check if the 4 digit code is a valid code and link to the corresponding section in the website
+                //Check if the 4 digit code is a valid code and link to the corresponding section in the website or app
                 //If code is not valid, reset the input area and notify user
                 else {
+                    int position=999;
                     switch (eText.getText().toString()) {
                         case "5943":
-                            check_url("https://www.geeksforgeeks.org/switch-statement-in-java/");
+                            check_url("https://chinatown-web.herokuapp.com/");
+                            break;
+
+                        case "4568":
+                            position=0;
+                            break;
+
+                        case "7631":
+                            position=1;
+                            break;
+
+                        case "2562":
+                            position=2;
+                            break;
+
+                        case "1516":
+                            position=3;
                             break;
 
                         default:
@@ -149,6 +166,13 @@ public class MainActivity2 extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Please enter a valid code", Toast.LENGTH_SHORT).show();
                             break;
                     }//End of switch case
+
+                    //Check if user links to section within the app
+                    if(position!=999){
+                        Intent n = new Intent(MainActivity2.this, LocationDetail.class);
+                        n.putExtra("position", position);
+                        startActivity(n);
+                    }
                 }//End of else
             }
         });

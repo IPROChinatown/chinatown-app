@@ -58,6 +58,15 @@
             android:layout_toLeftOf="@id/codeInput"
             android:text="Locations" />
 
+        //Button used for map function
+        <Button
+            android:id="@+id/mapB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="MapActivity"
+            android:text="Map" />
+
         //Button used to input code corresponding to location
 
         <Button

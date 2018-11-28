@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">ChinatownApp</string>
-    <string name="location_1">Edit Description here</string>
-    <string name="location_2">Edit Description here</string>
-    <string name="location_3">Edit Description here</string>
-    <string name="location_4">Edit Description here</string>
+    <string name="location_1">Pui Tak Center
+Pui Tak Center is a church based community center with programs in adult education and training, children and youth programs, and community programs. The adult education program is home to the largest ESL program in Chicago. In 2017 they had over 1,200 adults learning English through the center. Pui Tak also hosts after school programs for students. These programs help tutor the students in scholastics as well as English if need be. The community program helps new immigrants through daily challenges of adapting to life in the United States. Pui Tak also helps provide support group services and advocates for services for families with disabled children.
+
+For more information on the Pui Tak Center visit: https://www.puitak.org/
+</string>
+    <string name="location_2">Chinatown Gate
+It is the gate and symbol of Chicago ChinaTown. It’s colourful, with Sun Yat-sen’s handwriting “The World is Public” in the front, and is engraved with “Propriety, Righteousness, Integrity, and Honour” in the back.The architecture is based on Asian culture, it resembles torli in Japan, torii is a traditional Japanese gate most commonly found at the entrance of or within a Shinto shrine, where it symbolically marks the transition from the mundane to sacred.
+</string>
+    <string name="location_3">Chinese American Museum
+Just west of the intersection of Wentworth and 23rd Street in Chinatown is a small Chinese American Museum that’s full of treasures and wonders. Opened in 2005, the museum is designed to promote the culture and history of Chinese Americans in the Midwest through exhibitions, education, and research. The historic structure was originally a wholesale and general store, Quong Yick Co., and was donated to the museum by Raymond B. Lee. The museum has two galleries featuring mesmerizing artifacts and oral history accounts reflecting the quintessential experiences of Chinese Americans in the Midwest as well as a model Chinese hand laundry, a grocery store, and a restaurant. On the second floor, there is an object theatre which shows a 16-minute video, My Chinatown: Stories from Within. This unique audio-visual experience features the stories of Chinese Americans and their journeys to the United States. The stories share significant personal experiences while highlighting the history of Chinatown and the people who call it home. The museum also hosts different special events and exhibits to focus on an array of topics, such as historic Chinese fashion. Throughout the year, there are a series of film screenings and presentations/book talks presented at the museum.
+
+</string>
+    <string name="location_4">Buddhist Friendship Association/ Chicago Zhengjue Temple
+The Zhengjue Temple is the only Buddhist temple in Chinatown, developed in 2004 by the Buddhist Friendship Association. The original temple was on the northside of Chicago and formed by Vietnamese Chinese Buddhists in 1992. The location of the temple was challenging for the Chinese Buddhist immigrants residing in Chinatown because of the inconvenient transportation system and lengthy travel time. Up until the development of the temple in Chinatown, the believers within the community had difficulties in practicing their devotion. They needed one in their own community. The original temple was sold, and the current location was established. The temple, founded by Vietnamese Chinese believers, is now supported and respected by the majority of Chinese.
+Today, the Buddhist Friendship Association has 300 members and with the inclusion of Dharam in Chinese and English, the practice of Buddhism is rising. The association plays an important role in the community. In addition to Buddhist lecture and practice guidance, they offer services such as disaster relief, blessing, funeral arrangements and vending auspicious items like incense, wooden fish, charms, ashes and more. Furthermore, the association participates in improvements and growth of the Chinatown community, in hopes to persevere the safety in the community. As Chicago’s Chinatown grows, the temple plans to grow with the community by developing an exhibit in the near future, where Chinese Buddhist culture can be available to all.
+</string>
     <string name="location_5">Edit Description here</string>
     <string name="location_6">Edit Description here</string>
     <string name="location_7">Edit Description here</string>

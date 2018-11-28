@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-
 //Activity used to handle activity in the home page
 public class MainActivity extends AppCompatActivity {
 
@@ -49,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Handles the action of the locations button
         Button loc_btn = findViewById(R.id.locations);
         loc_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode,data);
+        int position=999;
 
         //Determine if user scanned a functional QR code or cancelled the scanning
         if(result != null){
@@ -71,11 +72,41 @@ public class MainActivity extends AppCompatActivity {
             if(result.getContents()==null){
                 Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
             }
-            //Scanner found a QR code. Link to website
+            //Scanner found a QR code. Link to website or location within app
             else{
                 Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
                 String url3 = result.getContents();
-                check_url(url3);
+
+                //Linking to location in app
+                if(url3.contains("appLoc")){
+                    switch(url3){
+                        case "https://appLoc-puitak/":
+                            position = 0;
+                            break;
+
+                        case "https://appLoc-CGate/":
+                            position = 1;
+                            break;
+
+                        case "https://appLoc-CAMC/":
+                            position = 2;
+                            break;
+
+                        case "https://appLoc-Buddhist/":
+                            position = 3;
+                            break;
+                    }
+
+                    //Open corresponding activity in app
+                    Intent u = new Intent(MainActivity.this, LocationDetail.class);
+                    u.putExtra("position", position);
+                    startActivity(u);
+                }
+                else{
+                    //Linking to a website
+                    check_url(url3);
+                }
+
             }
         }
 
@@ -117,4 +148,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, MainActivity2.class);
         startActivity(intent);
     }
+
+    //Activity used for map
+    public void MapActivity(View view){
+        Intent intent = new Intent(MainActivity.this, MapActivity.class);
+        startActivity(intent);
+    }
+
 }

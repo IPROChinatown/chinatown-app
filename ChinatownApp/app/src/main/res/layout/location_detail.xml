@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
     <RelativeLayout
+        android:id="@+id/detail_description_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/image"
             android:layout_alignParentTop="true"
             android:layout_width="fill_parent"
             android:layout_height="350dip"
             android:layout_marginLeft="5dip"
-            android:src="@drawable/home_icon" />
+            android:src="@drawable/puitak" />
+
         <TextView
             android:id="@+id/location"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/image"
-            android:textSize="24sp"
-            />
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/detail_read_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" />
     </RelativeLayout>
 </ScrollView>

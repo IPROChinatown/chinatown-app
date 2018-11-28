@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ipro.chinatownapp">
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +20,10 @@
             android:stateNotNeeded="true"/>
         <activity
             android:name=".MainActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".MapActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
